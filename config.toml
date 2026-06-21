@@ -1,9 +1,9 @@
 [theme]
 base                = "light"
-primaryColor        = "#4A6CF7"
-backgroundColor     = "#F0F4FB"
-secondaryBackgroundColor = "#DDE6F8"
-textColor           = "#1A1F36"
+primaryColor        = "#c15b1c"  # Butonlar ve vurgular icin sıcak turuncu/amber tonu
+backgroundColor     = "#ecce64f5"  # Arka plan icin cok acik, gozu yormayan krem/fildisi tonu
+secondaryBackgroundColor = "#953d27" # Yan menu ve kutular icin hafif kahve/krem tonu
+textColor           = "#000000"  # Tum yazilarin net okunmasi icin tamamen Siyah
 font                = "sans serif"
 
 [server]
