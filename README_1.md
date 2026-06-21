@@ -72,7 +72,7 @@ Uygulamanın çekirdek iş mantığını barındırır; dosya sistemiyle hiçbir
 
 - **Atomik yazma:** Veriler önce `.tmp` uzantılı geçici bir dosyaya yazılır, ardından asıl dosyaya taşınır. Bu yöntem, yarım yazılmış ve bozuk JSON dosyası riskini sıfıra indirir.
 - **Otomatik yedekleme:** Her yazma işleminden önce mevcut dosya `data/yedekler/` klasörüne zaman damgasıyla kopyalanır.
-- **Başlangıç verisi:** `data/questions.json` dosyası bulunamazsa uygulama, 5 konuda 21 örnek sorudan oluşan Türkçe bir soru bankasını otomatik olarak oluşturur.
+- **Başlangıç verisi:** `data/questions.json` dosyası bulunamazsa, program Python programlama konularını kapsayan Türkçe soru bankasını otomatik olarak oluşturur ve sistemi hazır hale getirir.
 - **Hata yönetimi:** Tüm dosya işlemleri `try-except` blokları içinde sarmalanmıştır; bozuk soru kayıtları uygulamayı çökertmeden atlanır.
 
 ### `requirements.txt` — Bağımlılıklar
