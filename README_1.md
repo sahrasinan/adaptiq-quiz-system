@@ -53,7 +53,7 @@ adaptiq/
 
 ### `app.py` — Kullanıcı Arayüzü ve Sayfa Yönlendiricisi
 
-Uygulamanın Streamlit giriş noktasıdır. Altı sayfa barındırır: **Anasayfa**, **Giriş**, **Kayıt**, **Sınav Kurulumu**, **Sınav** ve **Geçmiş**. Tüm sayfa geçişleri `st.session_state` üzerinden yönetilir; harici bir çoklu sayfa mekanizmasına gerek duyulmaz. Özel CSS ile koyu tema ve dinamik bileşenler (ilerleme çubuğu, zamanlayıcı, geri bildirim kartları) uygulanır.
+Uygulamanın Streamlit giriş noktasıdır. Altı sayfa barındırır: **Anasayfa**, **Giriş**, **Kayıt**, **Sınav Kurulumu**, **Sınav** ve **Geçmiş**. Tüm sayfa geçişleri `st.session_state` üzerinden yönetilir; harici bir çoklu sayfa mekanizmasına gerek duyulmaz. Özel CSS ile gözü yormayan krem, kahve ve turuncu tonlarında açık renk (light) tema ve dinamik bileşenler (ilerleme çubuğu, zamanlayıcı, geri bildirim kartları) uygulanır.
 
 ### `models.py` — OOP Veri Modelleri
 
@@ -91,8 +91,8 @@ Projenin ihtiyaç duyduğu tek harici kütüphaneyi listeler. Python standart k�
 ### Adım 1 — Depoyu Klonla
 
 ```bash
-git clone https://github.com/kullanici-adiniz/adaptiq.git
-cd adaptiq
+git clone https://github.com/sahrasinan/adaptiq-quiz-system.git
+cd adaptiq-quiz-system
 ```
 
 ### Adım 2 — Sanal Ortam Oluştur (Önerilen)
@@ -120,6 +120,8 @@ streamlit run app.py
 ```
 
 Uygulama varsayılan olarak **http://localhost:8501** adresinde açılır.
+
+🚀 **Canlı Uygulama Adresi:** Projenin Streamlit Cloud üzerinde canlıda çalışan versiyonuna [https://quiz-system-sahraa.streamlit.app/](https://quiz-system-sahraa.streamlit.app/) adresinden doğrudan ulaşabilirsiniz.
 
 > **Not:** İlk çalıştırmada `data/` klasörü ve içindeki `questions.json` dosyası otomatik olarak oluşturulur. Herhangi bir ön kurulum gerekmez.
 
