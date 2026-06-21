@@ -28,19 +28,20 @@ st.set_page_config(
 
 st.markdown("""
 <style>
-/* ── Renk paleti ─────────────────────────────────────────────── */
+/* ── Renk paleti — Açık Tema ──────────────────────────────────── */
 :root {
-  --bg:          #0F1117;
-  --surface:     #1A1D2E;
-  --surface2:    #252840;
-  --accent:      #7C6BFF;
-  --accent2:     #4ECDC4;
-  --success:     #2ECC71;
-  --danger:      #E74C3C;
-  --warn:        #F39C12;
-  --text:        #E8E8F0;
-  --text-muted:  #8888AA;
+  --bg:          #F0F4FB;
+  --surface:     #FFFFFF;
+  --surface2:    #DDE6F8;
+  --accent:      #4A6CF7;
+  --accent2:     #0EA5A0;
+  --success:     #16A34A;
+  --danger:      #DC2626;
+  --warn:        #D97706;
+  --text:        #1A1F36;
+  --text-muted:  #6B7280;
   --radius:      12px;
+  --shadow:      0 2px 8px rgba(74,108,247,0.10);
 }
 
 /* ── Temel ────────────────────────────────────────────────────── */
@@ -53,10 +54,11 @@ html, body, [data-testid="stAppViewContainer"] {
 /* ── Kartlar ──────────────────────────────────────────────────── */
 .iq-card {
   background: var(--surface);
-  border: 1px solid var(--surface2);
+  border: 1px solid #C7D9F5;
   border-radius: var(--radius);
   padding: 1.4rem 1.6rem;
   margin-bottom: 1rem;
+  box-shadow: var(--shadow);
 }
 .iq-card-accent {
   border-left: 4px solid var(--accent);
@@ -64,12 +66,13 @@ html, body, [data-testid="stAppViewContainer"] {
 
 /* ── Hero banner ──────────────────────────────────────────────── */
 .iq-hero {
-  background: linear-gradient(135deg, #1A1D2E 0%, #252840 100%);
-  border: 1px solid var(--surface2);
+  background: linear-gradient(135deg, #E8EFFD 0%, #D5E3FA 100%);
+  border: 1px solid #C7D9F5;
   border-radius: 16px;
   padding: 2.5rem 2rem 2rem;
   text-align: center;
   margin-bottom: 2rem;
+  box-shadow: var(--shadow);
 }
 .iq-logo { font-size: 3.2rem; line-height: 1; }
 .iq-title {
@@ -84,7 +87,7 @@ html, body, [data-testid="stAppViewContainer"] {
 }
 .iq-subtitle { color: var(--text-muted); font-size: 1rem; }
 
-/* ── İlerleme çubuğu ──────────────────────────────────────────── */
+/* ── Ilerleme cubugu ──────────────────────────────────────────── */
 .iq-progress-wrap {
   background: var(--surface2);
   border-radius: 99px;
@@ -99,7 +102,7 @@ html, body, [data-testid="stAppViewContainer"] {
   transition: width 0.4s ease;
 }
 
-/* ── Soru kartı ───────────────────────────────────────────────── */
+/* ── Soru karti ───────────────────────────────────────────────── */
 .iq-question-text {
   font-size: 1.15rem;
   font-weight: 600;
@@ -108,40 +111,41 @@ html, body, [data-testid="stAppViewContainer"] {
 }
 .iq-topic-badge {
   display: inline-block;
-  background: var(--surface2);
+  background: #E8EFFD;
   color: var(--accent);
   font-size: 0.78rem;
-  font-weight: 600;
+  font-weight: 700;
   padding: 0.2rem 0.7rem;
   border-radius: 99px;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   margin-bottom: 0.8rem;
+  border: 1px solid #C7D9F5;
 }
 .iq-diff-badge {
   display: inline-block;
   font-size: 0.78rem;
-  font-weight: 600;
+  font-weight: 700;
   padding: 0.2rem 0.7rem;
   border-radius: 99px;
   margin-left: 0.4rem;
 }
-.iq-diff-1 { background: #1a3a2a; color: var(--success); }
-.iq-diff-2 { background: #3a2f10; color: var(--warn); }
-.iq-diff-3 { background: #3a1515; color: var(--danger); }
+.iq-diff-1 { background: #DCFCE7; color: #15803D; border: 1px solid #BBF7D0; }
+.iq-diff-2 { background: #FEF3C7; color: #B45309; border: 1px solid #FDE68A; }
+.iq-diff-3 { background: #FEE2E2; color: #B91C1C; border: 1px solid #FECACA; }
 
 /* ── Cevap geri bildirimi ─────────────────────────────────────── */
 .iq-feedback-correct {
-  background: #0d2a1a;
-  border: 1px solid var(--success);
+  background: #F0FDF4;
+  border: 1.5px solid #86EFAC;
   border-radius: var(--radius);
   padding: 0.9rem 1.1rem;
   color: var(--success);
   font-weight: 600;
 }
 .iq-feedback-wrong {
-  background: #2a0d0d;
-  border: 1px solid var(--danger);
+  background: #FFF1F2;
+  border: 1.5px solid #FCA5A5;
   border-radius: var(--radius);
   padding: 0.9rem 1.1rem;
   color: var(--danger);
@@ -153,7 +157,7 @@ html, body, [data-testid="stAppViewContainer"] {
   margin-top: 0.5rem;
 }
 
-/* ── Metrik kutucukları ───────────────────────────────────────── */
+/* ── Metrik kutucuklari ───────────────────────────────────────── */
 .iq-metric-row {
   display: flex;
   gap: 0.8rem;
@@ -164,10 +168,11 @@ html, body, [data-testid="stAppViewContainer"] {
   flex: 1;
   min-width: 100px;
   background: var(--surface);
-  border: 1px solid var(--surface2);
+  border: 1px solid #C7D9F5;
   border-radius: var(--radius);
   padding: 0.8rem 1rem;
   text-align: center;
+  box-shadow: var(--shadow);
 }
 .iq-metric-value { font-size: 1.9rem; font-weight: 800; line-height: 1; }
 .iq-metric-label {
@@ -187,43 +192,52 @@ html, body, [data-testid="stAppViewContainer"] {
   margin: 0.5rem 0;
 }
 
-/* ── Kenar çubuğu ─────────────────────────────────────────────── */
-[data-testid="stSidebar"] { background: var(--surface) !important; }
+/* ── Kenar cubugu ─────────────────────────────────────────────── */
+[data-testid="stSidebar"] {
+  background: #E8EFFD !important;
+  border-right: 1px solid #C7D9F5;
+}
 
-/* ── Streamlit geçersiz kılmaları ─────────────────────────────── */
+/* ── Streamlit gecersiz kilmalari ─────────────────────────────── */
 div.stButton > button {
-  background: linear-gradient(135deg, var(--accent), #5a4bcc);
-  color: white;
+  background: linear-gradient(135deg, var(--accent), #3451C4);
+  color: #FFFFFF !important;
   border: none;
   border-radius: var(--radius);
   font-weight: 600;
   padding: 0.55rem 1.4rem;
   width: 100%;
-  transition: opacity .2s;
+  transition: opacity .2s, box-shadow .2s;
+  box-shadow: 0 2px 6px rgba(74,108,247,0.25);
 }
-div.stButton > button:hover  { opacity: 0.85; }
-div.stButton > button:active { opacity: 0.7; }
+div.stButton > button:hover  { opacity: 0.88; box-shadow: 0 4px 12px rgba(74,108,247,0.35); }
+div.stButton > button:active { opacity: 0.72; }
 
 div[data-testid="stRadio"] label {
-  background: var(--surface2);
+  background: #F4F8FE;
+  border: 1px solid #C7D9F5;
   border-radius: 8px;
   padding: 0.6rem 0.9rem;
-  margin: 0.2rem 0;
+  margin: 0.25rem 0;
   cursor: pointer;
-  transition: background .15s;
+  transition: background .15s, border-color .15s;
   display: block;
+  color: var(--text);
 }
-div[data-testid="stRadio"] label:hover { background: #2f3358; }
+div[data-testid="stRadio"] label:hover {
+  background: #E8EFFD;
+  border-color: var(--accent);
+}
 
 [data-testid="stTextInput"] input,
 [data-testid="stSelectbox"] select {
-  background: var(--surface2) !important;
+  background: #F4F8FE !important;
   color: var(--text) !important;
-  border: 1px solid #3a3d5c !important;
+  border: 1px solid #C7D9F5 !important;
   border-radius: 8px !important;
 }
 
-/* ── Zamanlayıcı ──────────────────────────────────────────────── */
+/* ── Zamanlayici ──────────────────────────────────────────────── */
 .iq-timer {
   font-size: 1.1rem;
   font-weight: 700;
@@ -231,7 +245,7 @@ div[data-testid="stRadio"] label:hover { background: #2f3358; }
   font-variant-numeric: tabular-nums;
 }
 
-hr { border-color: var(--surface2); }
+hr { border-color: #C7D9F5; }
 </style>
 """, unsafe_allow_html=True)
 
@@ -427,7 +441,7 @@ def page_kurulum() -> None:
     with col1:
         topic = st.selectbox("Konu filtresi", topics)
     with col2:
-        length = st.slider("Soru sayısı", 5, min(20, len(all_qs)), 10)
+        length = st.slider("Soru sayısı", 5, 10, 10)
 
     st.session_state["topic_filter"] = topic
     st.session_state["quiz_length"]  = length
